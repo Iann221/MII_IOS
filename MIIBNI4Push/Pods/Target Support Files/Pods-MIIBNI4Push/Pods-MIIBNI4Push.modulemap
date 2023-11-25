@@ -1,0 +1,6 @@
+framework module Pods_MIIBNI4Push {
+  umbrella header "Pods-MIIBNI4Push-umbrella.h"
+
+  export *
+  module * { export * }
+}

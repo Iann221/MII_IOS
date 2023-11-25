@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeView" customModule="MIIBNI1QRIS" customModuleProvider="target">
+            <connections>
+                <outlet property="saldoLabel" destination="l6R-fa-5cp" id="5iM-XH-SsQ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saldo Anda Saat Ini:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXk-Ti-uei">
+                    <rect key="frame" x="120.66666666666667" y="99" width="151.66666666666663" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IDR 0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l6R-fa-5cp">
+                    <rect key="frame" x="10" y="150" width="373" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="585-jq-xjw">
+                    <rect key="frame" x="30" y="638" width="333" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="7lJ-2z-2AG"/>
+                    </constraints>
+                    <color key="tintColor" red="0.96862745100000003" green="0.5568627451" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="SCAN QRIS"/>
+                    <connections>
+                        <action selector="scanQrisTap:" destination="-1" eventType="touchUpInside" id="nmd-k7-uxK"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxb-rv-Kc1">
+                    <rect key="frame" x="30" y="708" width="333" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="tPM-iR-B6s"/>
+                    </constraints>
+                    <color key="tintColor" red="0.96862745100000003" green="0.5568627451" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="LIHAT HISTORY"/>
+                    <connections>
+                        <action selector="historyTap:" destination="-1" eventType="touchUpInside" id="Bcv-VR-e37"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="xXk-Ti-uei" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="5WX-jL-XyP"/>
+                <constraint firstItem="585-jq-xjw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="Ag2-vx-tc3"/>
+                <constraint firstItem="l6R-fa-5cp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="Dma-OQ-OLp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vxb-rv-Kc1" secondAttribute="trailing" constant="30" id="M5Q-gM-Qhe"/>
+                <constraint firstItem="l6R-fa-5cp" firstAttribute="top" secondItem="xXk-Ti-uei" secondAttribute="bottom" constant="30" id="NgG-BR-IfL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="585-jq-xjw" secondAttribute="trailing" constant="30" id="PdF-Sa-pFH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="vxb-rv-Kc1" secondAttribute="bottom" constant="60" id="Uil-X8-v8D"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="l6R-fa-5cp" secondAttribute="trailing" constant="10" id="YWU-mS-BjY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="585-jq-xjw" secondAttribute="bottom" constant="130" id="eC3-HZ-N3b"/>
+                <constraint firstItem="xXk-Ti-uei" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="lCv-xe-u0K"/>
+                <constraint firstItem="vxb-rv-Kc1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="ltm-Ls-CAT"/>
+                <constraint firstItem="l6R-fa-5cp" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="vfd-Bo-dXQ"/>
+            </constraints>
+            <point key="canvasLocation" x="-50" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

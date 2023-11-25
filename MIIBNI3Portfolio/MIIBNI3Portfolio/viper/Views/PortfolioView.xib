@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PortfolioView" customModule="MIIBNI3Portfolio" customModuleProvider="target">
+            <connections>
+                <outlet property="donutChart" destination="AY2-vR-gP8" id="y7o-1x-LsS"/>
+                <outlet property="lineChart" destination="fCc-IB-ayy" id="DvU-Z6-VvP"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AY2-vR-gP8" customClass="PieChartView" customModule="Charts">
+                    <rect key="frame" x="0.0" y="59" width="393" height="375"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="375" id="yU5-RR-Z4i"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fCc-IB-ayy" customClass="LineChartView" customModule="Charts">
+                    <rect key="frame" x="0.0" y="434" width="393" height="384"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="AY2-vR-gP8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="QsY-uS-6UW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="fCc-IB-ayy" secondAttribute="bottom" id="R2W-87-l0Y"/>
+                <constraint firstItem="fCc-IB-ayy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="UZv-Bd-Fzd"/>
+                <constraint firstItem="fCc-IB-ayy" firstAttribute="top" secondItem="AY2-vR-gP8" secondAttribute="bottom" id="W8o-gf-zPy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="AY2-vR-gP8" secondAttribute="trailing" id="ah5-WA-Gd8"/>
+                <constraint firstItem="AY2-vR-gP8" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="eLA-9X-Kbm"/>
+                <constraint firstItem="fCc-IB-ayy" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="h54-cL-Wjw"/>
+            </constraints>
+            <point key="canvasLocation" x="48" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

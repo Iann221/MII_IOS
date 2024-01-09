@@ -52,8 +52,7 @@ class ScannerView: UIViewController, AVCaptureMetadataOutputObjectsDelegate, Any
         previewLayer.frame = view.layer.bounds
         previewLayer.videoGravity = .resizeAspectFill
         view.layer.addSublayer(previewLayer)
-
-        captureSession.startRunning()
+    
     }
 
     func failed() {
@@ -67,7 +66,9 @@ class ScannerView: UIViewController, AVCaptureMetadataOutputObjectsDelegate, Any
         super.viewWillAppear(animated)
 
         if (captureSession?.isRunning == false) {
-            captureSession.startRunning()
+            DispatchQueue.global(qos: .background).async {
+                self.captureSession.startRunning()
+            }
         }
     }
 
@@ -99,7 +100,10 @@ class ScannerView: UIViewController, AVCaptureMetadataOutputObjectsDelegate, Any
                     scannerPresenter.viewDidScanQR(id: datas[1], sumber: datas[0], merchant: datas[2], nominal: Int64(datas[3]) ?? 0)
                 }
             }))
-            alert.addAction(UIAlertAction(title: "Batal", style: UIAlertAction.Style.cancel, handler: nil))
+            alert.addAction(UIAlertAction(title: "Batal", style: UIAlertAction.Style.cancel, handler: {
+                action in
+                self.navigationController?.popViewController(animated: true)
+            }))
             self.present(alert, animated: true, completion: nil)
         } else {
             let alert = UIAlertController(title: "Terjadi Kesalahan", message: "QRIS tidak valid", preferredStyle: .alert)

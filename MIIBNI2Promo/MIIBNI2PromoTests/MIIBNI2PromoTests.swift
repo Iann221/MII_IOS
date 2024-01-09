@@ -28,7 +28,7 @@ final class MIIBNI2PromoTests: XCTestCase {
     func testGetData() throws {
         XCTAssertTrue(self.datas.count > 0, "data fetching failed")
         let data = datas[0]
-        XCTAssertEqual(data.title, "no title")
+        XCTAssertEqual(data.title, "promo1")
     }
 
 }
